@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Gallery Garage 🚗
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GalleryGarage**는 다양한 자동차 볼 수 있는 갤러리입니다.
 
-Currently, two official plugins are available:
+무한 스크롤과 마우스 움직임에 따른 3D 카드 애니메이션으로 성능과 사용자 경험을 높였습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 프로젝트 설명
 
-## Expanding the ESLint configuration
+GalleryGarage는 자동차를 좋아하는 사람들을 위해 만든 갤러리 웹 앱입니다. 다양한 자동차 이미지를 찾아 볼 수 있고, 3D 카드 애니메이션을 통해 사용자에게 재밌는 시각적 경험을 제공합니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 핵심 기능
 
-- Configure the top-level `parserOptions` property like this:
+1. **무한 스크롤**: 스크롤할 때 끝없이 새로운 자동차 이미지를 불러와서, 부드럽고 최적화된 사용자 경험(UX)을 제공
+2. **3D 카드 애니메이션**: 자동차 이미지에 3D 입체 효과를 넣어, 재밌고 생동감있는 요소를 추가
+3. **반응형 디자인**: 다양한 디바이스에서 최적의 사용자 경험을 제공하기 위해 반응형 레이아웃으로 구현
+4. **최적화된 이미지 로딩**: lazy loading을 적용해 화면에 보이는 이미지들만 로드하여 성능 최적화
+5. **Skeleton UI**: 이미지를 불러오는 동안 스켈레톤 UI를 통해 부드러운 사용자 경험(UX)을 제공
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 주요 기술 스택
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React**: 사용자 인터페이스를 구축하기 위해 사용
+- **TailwindCSS**: 스타일링을 위한 Utility CSS
+- **Intersection Observer API**: 무한 스크롤과 lazy loading 구현하기 위한 Web API
